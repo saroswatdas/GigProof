@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GigProof • Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__logo">GP</span>
+        <span class="brand__name">GigProof</span>
+      </a>
+      <nav class="nav__links">
+        <a href="upload.html">Upload</a>
+        <a href="issue.html">Issue</a>
+        <a href="verify.html">Verify</a>
+
+        <a class="navCta" href="upload.html">Start →</a>
+
+        <button class="themeBtn" id="themeToggle" type="button">
+        <span class="themeDot"></span> Dark
+        </button>
+     </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Centered Title -->
+    <section class="pageHead pageHead--center">
+      <div class="badge">⚡ FinTrust • Blockchain Verification</div>
+      <h2 class="siteTitle">GigProof</h2>
+      <p class="tagline">
+        Tamper-proof income certificates for gig workers • Verified on blockchain
+      </p>
+    </section>
+
+    <!-- HERO -->
+    <section class="hero hero--premium">
+      <div class="hero__left">
+        <h1>Blockchain-verified income proof for gig workers.</h1>
+
+        <p class="muted heroDesc">
+          Upload payout proof → generate a certificate → store a tamper-proof hash on blockchain →
+          anyone can verify authenticity instantly.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--glow" href="upload.html">Start: Upload Proof</a>
+          <a class="btn btn--soft" href="verify.html">Verify a Certificate</a>
+        </div>
+
+        <div class="pillRow">
+          <span class="pill">FinTrust</span>
+          <span class="pill">Anti-Forgery</span>
+          <span class="pill">Financial Inclusion</span>
+        </div>
+      </div>
+      <div class="certMini">
+  <div class="certMini__top">
+    <div class="certMini__title">Income Certificate Preview</div>
+    <div class="certMini__chip">SHA-256</div>
+  </div>
+
+  <div class="certMini__body">
+    <div class="certMini__row">
+      <span class="muted">Worker</span>
+      <b>Rahul Das</b>
+    </div>
+    <div class="certMini__row">
+      <span class="muted">Platform</span>
+      <b>Zomato</b>
+    </div>
+    <div class="certMini__row">
+      <span class="muted">Avg monthly income</span>
+      <b>₹22,000</b>
+    </div>
+    <div class="certMini__row">
+      <span class="muted">Certificate ID</span>
+      <b class="mono">CERT-2026-12345</b>
+    </div>
+  </div>
+
+  <div class="certMini__hash mono">
+    0x9f3a...b71c
+  </div>
+
+  <div class="certMini__footer">
+    <span class="certMini__stamp">Verified on blockchain</span>
+    <span class="muted">GigProof</span>
+  </div>
+</div>
+
+
+      <!-- HOW IT WORKS -->
+      <div class="hero__right">
+        <div class="card card--big card--float card--glass">
+          <div class="card__title">How it works</div>
+
+          <ol class="steps">
+            <li><b>Upload</b> payout screenshots / statement.</li>
+            <li><b>Generate</b> an Income Proof PDF.</li>
+            <li><b>Hash</b> the PDF (SHA-256).</li>
+            <li><b>Store</b> hash on blockchain.</li>
+            <li><b>Verify</b> anytime by comparing hashes.</li>
+          </ol>
+
+          <div class="miniStatRow">
+            <div class="miniStat">
+              <div class="miniStat__k">Forgery risk</div>
+              <div class="miniStat__v">Reduced</div>
+            </div>
+            <div class="miniStat">
+              <div class="miniStat__k">Verification</div>
+              <div class="miniStat__v">Instant</div>
+            </div>
+            <div class="miniStat">
+              <div class="miniStat__k">Storage</div>
+              <div class="miniStat__v">On-chain hash</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+
+    <!-- TRUST BAR -->
+    <section class="trustBar">
+      <div class="trustBar__label muted">Trusted use-case for</div>
+      <div class="trustBar__row">
+        <span class="trustPill">🏦 Micro-lenders</span>
+        <span class="trustPill">🏠 Landlords</span>
+        <span class="trustPill">🧾 KYC teams</span>
+        <span class="trustPill">🚗 Gig platforms</span>
+        <span class="trustPill">💳 Fintech apps</span>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+
+    <!-- WHY -->
+    <section class="sectionHead">
+      <h3 class="sectionTitle">Why GigProof?</h3>
+      <p class="muted sectionSub">
+        Most gig workers don’t have salary slips — so income proof becomes easy to fake.
+        GigProof creates a tamper-proof certificate that anyone can verify.
+      </p>
+    </section>
+
+    <section class="grid grid--premium">
+      <div class="card card--floatSmall card--glass">
+        <div class="card__title">Tamper-proof PDF</div>
+        <p class="muted">
+          Even if someone edits the certificate, verification will fail instantly.
+        </p>
+      </div>
+
+      <div class="card card--floatSmall card--glass">
+        <div class="card__title">Privacy-friendly</div>
+        <p class="muted">
+          Only the hash goes on-chain. No sensitive documents are stored publicly.
+        </p>
+      </div>
+
+      <div class="card card--floatSmall card--glass">
+        <div class="card__title">Instant verification</div>
+        <p class="muted">
+          Lenders can verify authenticity in seconds, without contacting the platform.
+        </p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+
+    <!-- STATS ROW -->
+    <section class="statsRow">
+      <div class="statCard">
+        <div class="statCard__k">Verification time</div>
+        <div class="statCard__v">~3 seconds</div>
+      </div>
+      <div class="statCard">
+        <div class="statCard__k">Forgery detection</div>
+        <div class="statCard__v">Hash mismatch</div>
+      </div>
+      <div class="statCard">
+        <div class="statCard__k">Storage</div>
+        <div class="statCard__v">Blockchain</div>
+      </div>
+      <div class="statCard">
+        <div class="statCard__k">Best fit</div>
+        <div class="statCard__v">FinTrust</div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+
+    <!-- FAQ -->
+    <section class="sectionHead">
+      <h3 class="sectionTitle">FAQ</h3>
+      <p class="muted sectionSub">Answers judges usually ask.</p>
+    </section>
+
+    <section class="faq">
+      <div class="faq__item card card--glass">
+        <div class="faq__q">Does GigProof store user documents on blockchain?</div>
+        <div class="faq__a muted">
+          No. Only a SHA-256 hash is stored on-chain. Documents stay private.
+        </div>
+      </div>
+
+      <div class="faq__item card card--glass">
+        <div class="faq__q">What happens if someone edits the PDF?</div>
+        <div class="faq__a muted">
+          Editing changes the PDF hash. Verification fails instantly.
+        </div>
+      </div>
+
+      <div class="faq__item card card--glass">
+        <div class="faq__q">Why not use a normal database?</div>
+        <div class="faq__a muted">
+          A database can be modified by admins. Blockchain provides immutable proof.
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+
+    <!-- FINAL CTA -->
+    <section class="cta card card--glass softGlow">
+      <div class="cta__left">
+        <h3 class="cta__title">Ready to issue your first income certificate?</h3>
+        <p class="muted">
+          Create a certificate in minutes and verify it instantly with blockchain-backed trust.
+        </p>
+      </div>
+      <div class="cta__right">
+        <a class="btn btn--primary btn--glow" href="upload.html">Start Upload</a>
+        <a class="btn btn--soft" href="verify.html">Verify</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">© GigProof • Hackathon Build</span>
+      <span class="muted">Blockchain Ready</span>
+    </div>
+  </footer>
+  <script src="js/theme.js"></script>
+
+</body>
+</html>

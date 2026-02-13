@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GigProof • Verify</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__logo">GP</span>
+        <span class="brand__name">GigProof</span>
+      </a>
+      <nav class="nav__links">
+        <a href="upload.html">Upload</a>
+        <a href="issue.html">Issue</a>
+        <a class="active" href="verify.html">Verify</a>
+
+         <a class="navCta" href="upload.html">Start →</a>
+
+        <button class="themeBtn" id="themeToggle" type="button">
+        <span class="themeDot"></span> Dark
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pageHead">
+      <!-- Progress Tracker -->
+      <div class="progress">
+        <a class="progress__step" href="upload.html">1. Upload</a>
+        <span class="progress__sep">→</span>
+        <a class="progress__step" href="issue.html">2. Issue</a>
+        <span class="progress__sep">→</span>
+        <a class="progress__step active" href="verify.html">3. Verify</a>
+      </div>
+
+      <h2 class="pageTitle">Verify a certificate</h2>
+      <p class="muted">Upload a certificate and instantly detect if it was edited or forged.</p>
+    </section>
+
+    <section class="grid grid--2">
+      <div class="card card--glass">
+        <div class="card__title">Verifier input</div>
+
+        <div class="field">
+          <label>Certificate ID</label>
+          <input id="verifyCertId" type="text" placeholder="e.g. CERT-2026-12345" />
+        </div>
+
+        <div class="field">
+          <label>Upload certificate PDF</label>
+          <input id="verifyFile" type="file" accept=".pdf" />
+          <div class="muted" style="margin-top:8px;">
+            Upload the issued certificate PDF for verification.
+          </div>
+        </div>
+
+        <div class="row row--end">
+          <button id="verifyBtn" class="btn btn--primary btn--glow" type="button">
+            Verify
+          </button>
+        </div>
+
+        <div id="verifyStatus" class="status"></div>
+      </div>
+
+      <div class="card card--glass">
+        <div class="card__title">Result</div>
+
+        <div class="result" id="resultBox">
+          <div class="result__badge warn" id="resultBadge">—</div>
+          <div class="result__text" id="resultText">Upload a certificate and verify.</div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="kv">
+          <div class="kv__item">
+            <div class="kv__k">Computed Hash</div>
+            <div class="kv__v mono" id="computedHash">—</div>
+          </div>
+
+          <div class="kv__item">
+            <div class="kv__k">On-chain Hash</div>
+            <div class="kv__v mono" id="onchainHash">—</div>
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="result">
+          <div class="muted" style="line-height:1.6;">
+            GigProof fetches <b>onchainHash</b> from blockchain and compares it with the uploaded certificate.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">Verification is the key trust layer of GigProof.</span>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/verify.js"></script>
+  <script src="js/theme.js"></script>
+
+</body>
+</html>

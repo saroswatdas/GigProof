@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GigProof • Issue</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__logo">GP</span>
+        <span class="brand__name">GigProof</span>
+      </a>
+      <nav class="nav__links">
+        <a href="upload.html">Upload</a>
+        <a class="active" href="issue.html">Issue</a>
+        <a href="verify.html">Verify</a>
+
+        <a class="navCta" href="upload.html">Start →</a>
+
+        <button class="themeBtn" id="themeToggle" type="button">
+        <span class="themeDot"></span> Dark
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pageHead">
+      <!-- Progress Tracker -->
+      <div class="progress">
+        <a class="progress__step" href="upload.html">1. Upload</a>
+        <span class="progress__sep">→</span>
+        <a class="progress__step active" href="issue.html">2. Issue</a>
+        <span class="progress__sep">→</span>
+        <a class="progress__step" href="verify.html">3. Verify</a>
+      </div>
+
+      <h2 class="pageTitle">Generate income certificate</h2>
+      <p class="muted">Fill details and generate a certificate. Its hash will be stored on blockchain.</p>
+    </section>
+
+    <section class="grid grid--2">
+      <div class="card card--glass">
+        <div class="card__title">Worker details</div>
+
+        <div class="field">
+          <label>Full name</label>
+          <input id="fullName" type="text" placeholder="e.g. Rahul Das" />
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label>Platform</label>
+            <input id="platform2" type="text" placeholder="e.g. Zomato" />
+          </div>
+          <div class="field">
+            <label>City</label>
+            <input id="city" type="text" placeholder="e.g. Kolkata" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label>Avg monthly income (₹)</label>
+            <input id="income" type="number" min="0" placeholder="22000" />
+          </div>
+          <div class="field">
+            <label>Months analysed</label>
+            <input id="months2" type="number" min="1" max="24" value="3" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>User ID</label>
+          <input id="userId" type="text" placeholder="e.g. worker_1023" />
+        </div>
+
+        <div class="row row--end">
+          <button id="generateBtn" class="btn btn--primary btn--glow" type="button">
+            Generate Certificate
+          </button>
+        </div>
+      </div>
+
+      <div class="card card--glass">
+        <div class="card__title">Output</div>
+
+        <div class="kv">
+          <div class="kv__item">
+            <div class="kv__k">Certificate ID</div>
+            <div class="kv__v" id="certId">—</div>
+          </div>
+
+          <div class="kv__item">
+            <div class="kv__k">Document Hash (SHA-256)</div>
+            <div class="kv__v mono" id="docHash">—</div>
+          </div>
+
+          <div class="kv__item">
+            <div class="kv__k">Blockchain Tx</div>
+            <div class="kv__v mono" id="txHash">—</div>
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="result">
+          <div class="muted" style="line-height:1.6;">
+            GigProof stores the <b>docHash</b> on blockchain to prevent forgery and enable instant verification.
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="row row--end">
+          <a class="btn btn--soft" href="verify.html">Go to Verify</a>
+        </div>
+
+        <div id="issueStatus" class="status"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">Tip: Best experience using VS Code Live Server.</span>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/issue.js"></script>
+  <script src="js/theme.js"></script>
+
+</body>
+</html>

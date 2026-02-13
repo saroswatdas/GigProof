@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GigProof • Upload</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__logo">GP</span>
+        <span class="brand__name">GigProof</span>
+      </a>
+      <nav class="nav__links">
+        <a class="active" href="upload.html">Upload</a>
+        <a href="issue.html">Issue</a>
+        <a href="verify.html">Verify</a>
+
+        <a class="navCta" href="upload.html">Start →</a>
+
+
+        <button class="themeBtn" id="themeToggle" type="button">
+        <span class="themeDot"></span> Dark
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pageHead">
+      <!-- Progress Tracker -->
+      <div class="progress">
+        <a class="progress__step active" href="upload.html">1. Upload</a>
+        <span class="progress__sep">→</span>
+        <a class="progress__step" href="issue.html">2. Issue</a>
+        <span class="progress__sep">→</span>
+        <a class="progress__step" href="verify.html">3. Verify</a>
+      </div>
+
+      <h2 class="pageTitle">Upload payout proof</h2>
+      <p class="muted">Upload bank statement PDF or payout screenshots to generate your income certificate.</p>
+    </section>
+
+    <section class="card card--glass">
+      <div class="card__title">Upload</div>
+
+      <div class="uploadBox" id="dropZone">
+        <div class="uploadBox__icon">⬆️</div>
+        <div>
+          <div class="uploadBox__title">Drag & drop files here</div>
+          <div class="muted">PDF, PNG, JPG • Max 10MB</div>
+        </div>
+
+        <input id="fileInput" class="hidden" type="file" accept=".pdf,image/*" multiple />
+        <button id="chooseBtn" class="btn btn--primary" type="button">Choose Files</button>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="row">
+        <div class="field">
+          <label>Platform</label>
+          <select id="platform">
+            <option value="Zomato">Zomato</option>
+            <option value="Swiggy">Swiggy</option>
+            <option value="Rapido">Rapido</option>
+            <option value="Uber">Uber</option>
+            <option value="Freelance">Freelance</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Months of proof</label>
+          <input id="months" type="number" min="1" max="24" value="3" />
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="row row--end">
+        <a class="btn btn--soft" href="index.html">Back</a>
+        <button id="uploadBtn" class="btn btn--primary btn--glow" type="button">Upload & Continue</button>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div id="fileList" class="fileList"></div>
+      <div id="uploadStatus" class="status"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">Tip: Best experience using VS Code Live Server.</span>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/theme.js"></script>
+
+</body>
+</html>
